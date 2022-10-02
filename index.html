@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Black Jack</title>
+  <style>
+
+    * { 
+      box-sizing: border-box;
+    }
+body {
+  background-image: url('https://www.ixbt.com/img/n1/news/2020/0/4/blackjack-1600x891_large.jpg');
+}
+    body {
+      
+      font-family: courier;
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+
+    #header {
+      text-align: center;
+    }
+
+    #container {
+      background-color: rgb(43, 238, 151);
+      margin: 40px auto;
+      max-width: 800px;
+      padding: 38px 31px;
+    }
+    #submit-button {
+      font-size: 23px;
+      line-height: 33px;
+      margin: 0 0 23px 0;
+      padding: 0 20px;
+      width: 20%;
+    }
+    input {
+      font-size: 23px;
+      line-height: 33px;
+      margin: 0 0 23px 0;
+      padding: 0 9px;
+      width: 100%;
+    }
+
+    button {
+      font-size: 21px;
+      line-height: 33px;
+      margin: 0 0 23px 0;
+      padding: 0 6px;
+    }
+
+    #output-div {
+      background-color: rgb(255, 255, 255);
+      margin: 20px auto;
+      padding: 20px;
+      width: 100%;
+
+
+    }
+  </style>
+</head>
+
+<body style="background-color:powderblue;">
+  
+  <h1 id="header"><p style="color:white">🃏Black Jack🃏</p></h1>
+  <div id="container">
+    <center>
+    <p>Input</p>
+    </center>
+    <input id="input-field" />
+    <br />
+    <center>
+      <button id="submit-button">Click</button>
+    </center>
+    <center>
+    <p>Output</p>
+    </center>
+    <div id="output-div"></div>
+  </div>
+  <!-- Import program logic -->
+  <script src="script.js"></script>
+  <!-- Define button click functionality -->
+  <script>
+    var button = document.querySelector("#submit-button");
+    button.addEventListener("click", function () {
+      // Set result to input value
+      var input = document.querySelector("#input-field");
+      var result = main(input.value);
+
+      // Display result in output element
+      var output = document.querySelector("#output-div");
+      output.innerHTML = result;
+
+      // Reset input value
+      input.value = "";
+    });
+  </script>
+</body>
+
+</html>
